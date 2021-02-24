@@ -15,8 +15,8 @@ const password3 = "like a BOSS";
 // `isValidEmail` - returns `true` if the given string ends with `@codeimmersives.com`
 // and has at least one character before that, and `false` otherwise.
 
-function isValidEmail(string) {
-  if (string.endsWith("@codeimmersives.com")) {
+function isValidEmail(email) {
+  if (email.endsWith("@codeimmersives.com") && email[0] !== "@") {
     return true;
   } else {
     return false;
