@@ -3,65 +3,103 @@
 // And you can and should use them in your `isRegisteredUser` function.
 // But we use them in your test code as well, so whatever you do, don't delete them!
 
-const user1 = 'colin.jaffe@codeimmersives.com';
-const password1 = 'Hotforhimself';
-const user2 = 'mesuara@codeimmersives.com';
-const password2 = 'Console.logger';
-const user3 = 'anthony@codeimmersives.com';
-const password3 = 'like a BOSS';
-
+const user1 = "colin.jaffe@codeimmersives.com";
+const password1 = "Hotforhimself";
+const user2 = "mesuara@codeimmersives.com";
+const password2 = "Console.logger";
+const user3 = "anthony@codeimmersives.com";
+const password3 = "like a BOSS";
 
 // **YOUR** code below. Pass those tests!
 
+// `isValidEmail` - returns `true` if the given string ends with `@codeimmersives.com`
+// and has at least one character before that, and `false` otherwise.
 
+function isValidEmail(string) {
+  if (string.endsWith("@codeimmersives.com")) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
+// `isValidPassword` - returns true if the given string is at least 8 characters with
+// a lower case and upper case letter, and false otherwise. Do not use Regular Expressions
+// (regex). HINT: you can COMPARE an upper-cased version of your string to the current
+// string. If they're different, then it has at least one lower-cased letter.
+// You can also do the same to check for an upper-cased letter.
 
+function isValidPassword(string) {
+  if (string.length === 8) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
+// `isRegisteredUser` - returns true if the given string is identical to ONE of the
+// strings held in the variables `user1`, `user2`, and `user3`. Returns false otherwise.
+// HINT: your solution should NOT need `&&`.
 
-// Our code below. Do not touch!
+// function isRegisteredUser(string) {
+//   if () {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
+// 'passwordMatches` returns true if the first string given is one of the strings in
+// the user variables AND the second string is the matching string in the password
+// variables. Returns false otherwise. Our code below. Do not touch!
 
-if (typeof isValidEmail === 'undefined') {
+// function passwordMatches(string) {
+//   if (string.length === 8) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+if (typeof isValidEmail === "undefined") {
   isValidEmail = undefined;
 }
 
-if (typeof isValidPassword === 'undefined') {
+if (typeof isValidPassword === "undefined") {
   isValidPassword = undefined;
 }
 
-if (typeof isRegisteredUser === 'undefined') {
+if (typeof isRegisteredUser === "undefined") {
   isRegisteredUser = undefined;
 }
 
-if (typeof passwordMatches === 'undefined') {
+if (typeof passwordMatches === "undefined") {
   passwordMatches = undefined;
 }
 
-if (typeof user1 === 'undefined') {
+if (typeof user1 === "undefined") {
   user1 = undefined;
 }
 
-if (typeof user2 === 'undefined') {
+if (typeof user2 === "undefined") {
   user2 = undefined;
 }
 
-if (typeof user3 === 'undefined') {
+if (typeof user3 === "undefined") {
   user3 = undefined;
 }
 
-if (typeof password1 === 'undefined') {
+if (typeof password1 === "undefined") {
   password1 = undefined;
 }
 
-if (typeof password2 === 'undefined') {
+if (typeof password2 === "undefined") {
   password2 = undefined;
 }
 
-if (typeof password3 === 'undefined') {
+if (typeof password3 === "undefined") {
   password3 = undefined;
 }
-
-
 
 module.exports = {
   isValidEmail,
@@ -74,4 +112,4 @@ module.exports = {
   password1,
   password2,
   password3,
-}
+};
