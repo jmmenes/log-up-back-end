@@ -29,8 +29,12 @@ function isValidEmail(email) {
 // string. If they're different, then it has at least one lower-cased letter.
 // You can also do the same to check for an upper-cased letter.
 
-function isValidPassword(string) {
-  if (string.length === 8) {
+function isValidPassword(password) {
+  if (
+    password.length >= 8 &&
+    password.toUpperCase() !== password &&
+    password.toLowerCase() !== password
+  ) {
     return true;
   } else {
     return false;
@@ -41,25 +45,25 @@ function isValidPassword(string) {
 // strings held in the variables `user1`, `user2`, and `user3`. Returns false otherwise.
 // HINT: your solution should NOT need `&&`.
 
-// function isRegisteredUser(string) {
-//   if () {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
+function isRegisteredUser(email) {
+  return email === user1 || email === user2 || email === user3;
+}
 
 // 'passwordMatches` returns true if the first string given is one of the strings in
 // the user variables AND the second string is the matching string in the password
 // variables. Returns false otherwise. Our code below. Do not touch!
 
-// function passwordMatches(string) {
-//   if (string.length === 8) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
+function passwordMatches(email, password) {
+  if (email === user1 && password === password1) {
+    return true;
+  } else if (email === user2 && password === password2) {
+    return true;
+  } else if (email === user3 && password === password3) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 if (typeof isValidEmail === "undefined") {
   isValidEmail = undefined;
